@@ -13,6 +13,7 @@ class BoardsController < ApplicationController
     matching_boards = Board.where({ :id => the_id })
 
     @the_board = matching_boards.at(0)
+    @board_posts = Post.where({ :board_id => the_id})
 
     render({ :template => "boards/show" })
   end
