@@ -11,4 +11,5 @@
 #  board_id   :integer
 #
 class Post < ApplicationRecord
+  validates(:body, :expires_on, :title, presence: true)
 end
